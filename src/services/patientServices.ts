@@ -6,6 +6,17 @@ const getPatients = (): Patient[] => {
   return data;
 };
 
+const getPatient = (id: string): Patient | undefined => {
+  const patient = data.find((d) => d.id === id);
+  if (patient) {
+    const foundPatient = {
+      ...patient,
+    };
+    return foundPatient;
+  }
+  return patient;
+};
+
 const addPatient = (patient: NewPatient): Patient => {
   const newPatient = {
     ...patient,
@@ -18,4 +29,5 @@ const addPatient = (patient: NewPatient): Patient => {
 export default {
   getPatients,
   addPatient,
+  getPatient,
 };
