@@ -39,9 +39,20 @@ const addEntry = (entry: EntryWithoutId, id: string): Entry => {
   return newEntry;
 };
 
+const changeHealthRating = (rating: number, id: string) => {
+  const index = data.findIndex((patient) => {
+    return patient.id === id;
+  });
+  if (index !== -1) {
+    const patient = data[index];
+    data[index] = { ...patient, healthRating: rating };
+  }
+};
+
 export default {
   getPatients,
   addPatient,
   getPatient,
   addEntry,
+  changeHealthRating,
 };

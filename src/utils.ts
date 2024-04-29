@@ -6,6 +6,7 @@ import {
   Discharge,
   Diagnosis,
   SickLeave,
+  RatingAndId,
 } from './types';
 
 const isString = (text: unknown): text is string => {
@@ -126,6 +127,20 @@ export const toNewPatient = (object: unknown): NewPatient => {
       entries: [],
     };
     return newPatient;
+  }
+
+  throw new Error('Incorrect data: field missing');
+};
+export const toNewRating = (object: unknown): RatingAndId => {
+  if (!object || typeof object !== 'object') {
+    throw new Error('Incorrect or missing data');
+  }
+  if ('id' in object && 'healthRating' in object) {
+    const RatingAndId: RatingAndId = {
+      healthRating: Number(object.healthRating),
+      id: String(object.id),
+    };
+    return RatingAndId;
   }
 
   throw new Error('Incorrect data: field missing');

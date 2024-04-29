@@ -4,6 +4,7 @@ const patients: Patient[] = [
   {
     id: 'd2773336-f723-11e9-8f0b-362b9e155667',
     name: 'John McClane',
+    healthRating: 0,
     dateOfBirth: '1986-07-09',
     ssn: '090786-122X',
     gender: Gender.MALE,
@@ -27,6 +28,7 @@ const patients: Patient[] = [
   {
     id: 'd2773598-f723-11e9-8f0b-362b9e155667',
     name: 'Martin Riggs',
+    healthRating: 2,
     dateOfBirth: '1979-01-30',
     ssn: '300179-777A',
     gender: Gender.MALE,
@@ -56,6 +58,7 @@ const patients: Patient[] = [
     gender: Gender.OTHER,
     occupation: 'Technician',
     entries: [],
+    healthRating: 3,
   },
   {
     id: 'd2773822-f723-11e9-8f0b-362b9e155667',
@@ -64,6 +67,7 @@ const patients: Patient[] = [
     ssn: '050174-432N',
     gender: Gender.FEMALE,
     occupation: 'Forensic Pathologist',
+    healthRating: 4,
     entries: [
       {
         id: 'b4f4eca1-2aa7-4b13-9a18-4a5535c3c8da',
@@ -99,6 +103,7 @@ const patients: Patient[] = [
     ssn: '090471-8890',
     gender: Gender.MALE,
     occupation: 'Digital evangelist',
+    healthRating: 3,
     entries: [
       {
         id: '54a8746e-34c4-4cf4-bf72-bfecd039be9a',
