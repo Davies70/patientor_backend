@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tsc": "rm -rf build && tsc",
+    "tsc": "rm tsc",
     "dev": "ts-node-dev src/index.ts",
     "lint": "eslint --ext .ts .",
     "start": "node build/src/index.js",
-    "build:ui": "rm -rf dist && cd ../patientor_frontend && npm run build && cp -r dist ../patentor_backend",
+    "build:ui": "rm -rf build && cd ../patientor_frontend && npm run build && cp -r dist ../patentor_backend",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
   },
   "author": "",
