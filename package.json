@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf build  && tsc",
-    "dev": "ts-node-dev src/index.ts",
+    "dev": "rm -rf build  && tsc",
+    "dev-s": "ts-node-dev src/index.ts",
     "lint": "eslint --ext .ts .",
     "start": "node build/src/index.js",
     "build:ui": "rm -rf build && cd ../patientor_frontend && npm run build && cp -r dist ../patentor_backend",
