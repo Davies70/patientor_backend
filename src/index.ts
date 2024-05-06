@@ -21,7 +21,7 @@ app.get('/api/ping', (_req, res) => {
 
 // Serve your React application's index.html for all routes
 app.get('*', (_req, res) => {
-  res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
+  res.sendFile(path.resolve(__dirname, '..', '..', 'dist', 'index.html'));
 });
 
 app.listen(PORT, () => {
