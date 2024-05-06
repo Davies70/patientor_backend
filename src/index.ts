@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import diagnosisRouter from './routes/diagnoses';
 import patientRouter from './routes/patient';
+import path from 'path';
 
 const app = express();
 
@@ -16,6 +17,11 @@ const PORT = process.env.PORT || 3001;
 
 app.get('/api/ping', (_req, res) => {
   res.send('pong');
+});
+
+// Serve your React application's index.html for all routes
+app.get('*', (_req, res) => {
+  res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
 });
 
 app.listen(PORT, () => {
